@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+    <title>angular</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.6.9/angular-messages.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        p {
+            color: red;
+        }
+    </style>
+</head>
+
+<body ng-app="app">
+    <div ng-controller="ctrl">
+        <form name="forms" novalidate>
+
+            <input type="email " ng-model="email" required="true" name="email">
+            <input type="text" name="password" ng-model="password" ng-maxlength="7" >
+          <p ng-show="forms.password.$error && forms.password.$touched">this is empty</p>
+          <div ng-messages="forms.$password.$error">
+            <p ng-message="forms.password.maxlength">please do it</p>
+          </div>
+            <input type="submit" ng-disabled="form.$error">
+        </form>
+
+    </div>
+
+    <script>
+        var app = angular.module("app", ["ngMessages"]);
+        app.controller("ctrl", ["$scope", "$http", function($scope, $http) {
+
+        }]);
+    </script>
+</body>
+
+</html>
