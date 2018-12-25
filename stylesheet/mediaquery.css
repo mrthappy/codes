@@ -1,0 +1,41 @@
+@media screen and (min-width:680px){
+	.little_foto_gallery{
+		display:grid;
+		grid-template-columns:repeat(3,1fr);
+		grid-gap:5px;
+		background:black;
+	}
+	.main_nav{width:50%;}
+	.blicker{
+	top:-12px;
+	right:-20px;
+}
+
+	.crew_image_holder{
+		justify-content:space-between;
+		flex-direction:row;
+		padding:40px;
+	}
+
+
+}
+
+@media screen and (min-width:1000px){
+  .contact_area{
+		max-width:700px;
+		margin:0 auto;
+	}
+}
+@media screen and (min-width:700px){
+	.crew_gird:background:black;
+}
+@media screen and (min-width:900px){
+	.little_foto_gallery{
+			grid-template-columns:repeat(4,1fr);
+	}
+.blicker{
+	top:-12px;
+	right:-30px;
+}
+
+}
